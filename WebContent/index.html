@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="lib/jquery-1.11.2.min.js"></script>
+		<script src="lib/jquery.validate.min.js"></script>
+
+		<link rel="StyleSheet" href="css/stilo.css" type="text/css">
+		<script type="text/javascript">
+
+$(document).ready(function() {
+	 $("#linea1").click(function(){
+        $("#sub1").slideToggle("linear");
+         $("#sub2").fadeOut('slow/400/fast');
+          $("#sub3").fadeOut('slow/400/fast');
+         	
+    });
+	 $("#linea2").click(function(){
+        $("#sub2").slideToggle("linear");
+         $("#sub1").fadeOut('slow/400/fast');
+          $("#sub3").fadeOut('slow/400/fast');
+    });
+	 $("#linea3").click(function(){
+        $("#sub3").slideToggle("linear");
+         $("#sub1").fadeOut('slow/400/fast');
+          $("#sub2").fadeOut('slow/400/fast');
+    });
+
+	  $("#insertarA").click(function(){
+		  $("#insertarPr").fadeOut(0);
+		  $("#insertarASI").fadeOut(0);
+	   $("#insertarAL").fadeIn("linear");
+	    $("#sub1").fadeOut("linear");
+
+    }); 
+	  $("#insertarP").click(function(){
+		  $("#insertarAL").fadeOut(0);
+		  $("#insertarASI").fadeOut(0);
+	   $("#insertarPr").fadeIn("linear");
+	    $("#sub2").fadeOut("linear");
+
+    });
+	  $("#insertarAS").click(function(){
+		  $("#insertarAL").fadeOut(0);
+		  $("#insertarPr").fadeOut(0);
+	   $("#insertarASI").fadeIn("linear");
+	    $("#sub3").fadeOut("linear");
+
+    });
+   
+
+
+
+/* 
+  	$("#ficha").validate({
+					rules:{
+						dni:{
+							required: true,
+							maxlength: 9
+						},
+						nombre:{
+							required: true,
+							maxlength: 20
+						},
+						apellido:{
+							required: true,
+    						maxlength: 20
+						},
+						telefono:{
+							required: true,
+    						maxlength: 8
+						},
+						direccion:{
+							required: true,
+    						maxlength: 20
+						},
+						nss:{
+							required: true,
+    						maxlength: 10
+						},
+						
+					},
+					 
+					messages:{
+						dni: {
+								required: "Por favor, introduce el dni",
+								maxlength: "Máximo y minimo 9 caracteres"
+						},
+						nombre: {
+								required: "Por favor, introduce el nombre",
+								maxlength: "Máximo 20 caracteres"
+						},
+						apellido: {
+								required: "Por favor, introduce el apellido",
+								maxlength: "Máximo 20 caracteres "
+						},
+						telefono: {
+								required: "introduce el numero de telefono",
+								maxlength: "Máximo y minimo 8 caracteres"
+						},
+						direccion: {
+								required: "introduce tu direccion",
+								maxlength: "Máximo 20 caracteres"
+						},
+						nss: {
+								required: "introduce tu numero de segudirad total",
+								maxlength: "Máximo 10 caracteres"
+						},
+						
+					}
+				})
+
+	$("#dentistas").validate({
+					rules:{
+						codigoD:{
+							required: true,
+							maxlength: 9
+						},
+						nombreDEN:{
+							required: true,
+							maxlength: 20
+						},
+						apellidoDEN:{
+							required: true,
+    						maxlength: 20
+						},
+						sueldo:{
+							required: true,
+    						maxlength: 8
+						},
+						tlf:{
+							required: true,
+    						maxlength: 8
+						},
+						especializacion:{
+							required: true,
+    						maxlength: 20
+						},
+						codigoCLi:{
+							required: true,
+    						maxlength: 10
+						},
+						
+					},
+					 
+					messages:{
+						codigoD: {
+								required: "Por favor, introduce el codigoD",
+								maxlength: "Máximo y minimo 9 caracteres"
+						},
+						nombreDEN: {
+								required: "Por favor, introduce el nombre",
+								maxlength: "Máximo 20 caracteres"
+						},
+						apellidoDEN: {
+								required: "Por favor, introduce el apellido",
+								maxlength: "Máximo 20 caracteres "
+						},
+						sueldo: {
+								required: "introduce el sueldo",
+								maxlength: "Máximo y minimo 8 caracteres"
+						},
+						tlf: {
+								required: "introduce el numero de telefono",
+								maxlength: "Máximo y minimo 8 caracteres"
+						},
+						especializacion: {
+								required: "introduce tu especializacion",
+								maxlength: "Máximo 20 caracteres"
+						},
+						codigoCLi: {
+								required: "introduce el codigo de la clinica donde trabaja",
+								maxlength: "Máximo 10 caracteres"
+						},
+					}
+				})
+
+$("#tratamientoss").validate({
+					rules:{
+						codigoT:{
+							required: true,
+							maxlength: 9
+						},
+						nombre:{
+							required: true,
+							maxlength: 20
+						},
+						precio:{
+							required: true,
+    						maxlength: 20
+						},
+						codigoclinica:{
+							required: true,
+    						maxlength: 8
+						},
+						dnicliente:{
+							required: true,
+    						maxlength: 20
+						},
+						codigoH:{
+							required: true,
+    						maxlength: 10
+						},
+						codigoDe:{
+							required: true,
+    						maxlength: 10
+						},
+						
+					},
+					 
+					messages:{
+						codigoT: {
+								required: "Por favor, introduce el codigoT",
+								maxlength: "Máximo y minimo 9 caracteres"
+						},
+						nombre: {
+								required: "Por favor, introduce el nombre",
+								maxlength: "Máximo 20 caracteres"
+						},
+						precio: {
+								required: "Por favor, introduce el precio",
+								maxlength: "Máximo 20 caracteres "
+						},
+						
+						codigoclinica: {
+								required: "introduce el numero de codigoclinica",
+								maxlength: "Máximo y minimo 8 caracteres"
+						},
+						dnicliente: {
+								required: "introduce el dni del cleinte",
+								maxlength: "Máximo 20 caracteres"
+						},
+						codigoH: {
+								required: "introduce el codigo del Higienista",
+								maxlength: "Máximo 10 caracteres"
+						},
+						
+						codigoDe: {
+								required: "introduce el codigo del dentista ",
+								maxlength: "Máximo 10 caracteres"
+						},
+					
+					}
+				})
+*/
+	
+
+});
+		</script>
+	</head>
+	<body>
+		<div id="banner">
+			<div id="logo"></div>
+			<div id="bannerletras">
+				<h1>matriculas</h1>
+			</div>
+		</div><!--banner-->
+
+		<div id="nav">
+		
+	<ul>	
+		<li id="linea1">alumnos</li>
+						<ol hidden id="sub1">
+			                <li id="insertarA">insertar alumnos</li>
+			                <li id="verA">ver alumnos</li>
+			                <li id="borrarA">borrar alumnos</li>
+			                <li id="modificarA">modificar alumnos</li>
+			                
+			            </ol>
+	</ul>	
+	<ul>	
+		<li id="linea2">profesores</li>
+						<ol hidden id="sub2">
+			                <li id="insertarP">insertar profesor</li>
+			                <li id="higienista">higienista</li>
+			                <li id="auxiliar">auxiliar</li>
+			            </ol>
+	</ul>
+	<ul>	
+		<li id="linea3">matricula</li>	
+		
+						<ol hidden id="sub3">
+			                <li id="insertarAS">insertar asignatura</li>
+			                <li id="producto">producto</li>
+			                <li id="producto">auxiliar</li>
+			            </ol>
+		</ul>
+			
+	</div><!--nav-->
+	<div id="contenido">
+					<!--         alumnos       -->
+		<div hidden id="insertarAL">
+			<form action="ADDAL" method="POST">
+			<fieldset>
+				 <legend><h1>insertar alumnos</h1></legend>
+				 <div>
+					<label for="dniA" class="label">DNI del alumno</label>
+					<input name="dniA" type="text"  id="dniA" placeholder = "introduce el DNI">
+				</div>
+				<div>
+					<label for="nombreA" class="label">Nombre</label>
+					<input name="nombreA" type="text"  id="nombreA" placeholder = "introduce el nombre">
+				</div>
+				<div>
+					<label for="apellidoA" class="label">apellido</label>
+					<input name="apellidoA" type="text"  id="apellidoA" placeholder = "introduce el apellido">
+				</div>
+				<div>
+					<label for="añoINSA" class="label">año de inscripcion</label>
+					<input name="anoINSA" type="text"  id="anoINSA" placeholder = "introduce el año de inscripcion">
+				</div>
+				<div>
+					<label for="cicloA" class="label">ciclo</label>
+					<input name="cicloA" type="text"  id="cicloA" placeholder = "introduce el ciclo">
+				</div>
+				<div>
+					<input type="submit" value="Enviar">
+				</div>
+			</fieldset>
+		</form>
+		</div>
+		
+		
+		<!--         profesor       -->
+		<div hidden id="insertarPr">
+			<form action="ADDPR" method="POST">
+			<fieldset>
+				 <legend><h1>insertar Profesor</h1></legend>
+				 <div>
+					<label for="dniP" class="label">DNI del profesor</label>
+					<input name="dniP" type="text"  id="dniP" placeholder = "introduce el DNI">
+				</div>
+				<div>
+					<label for="nombreP" class="label">Nombre</label>
+					<input name="nombreP" type="text"  id="nombreP" placeholder = "introduce el nombre">
+				</div>
+				<div>
+					<label for="apellidoP" class="label">apellido</label>
+					<input name="apellidoP" type="text"  id="apellidoP" placeholder = "introduce el apellido">
+				</div>
+				<div>
+					<label for="titulacion" class="label">titulacion</label>
+					<input name="titulacion" type="text"  id="titulacion" placeholder = "introduce la titulacion">
+				</div>
+				<div>
+					<label for="departamento" class="label">departamento</label>
+					<input name="departamento" type="text"  id="departamento" placeholder = "introduce el departamento">
+				</div>
+				<div>
+					<input type="submit" value="Enviar">
+				</div>
+			</fieldset>
+		</form>
+		</div>
+		
+		
+		<!--         matricula o asignatura       -->
+		<div hidden id="insertarASI">
+			<form action="ADDAS" method="POST">
+			<fieldset>
+				 <legend><h1>insertar Asignatura</h1></legend>
+				 <div>
+					<label for="nombre" class="label">nombre de la asignatura</label>
+					<input name="nombre" type="text"  id="nombre" placeholder = "introduce el nombre">
+				</div>
+				<div>
+					<label for="creditos" class="label">creditos</label>
+					<input name="creditos" type="text"  id="creditos" placeholder = "introduce los creditos">
+				</div>
+				<div>
+					<label for="dni" class="label">dni del profesor (debe existir)</label>
+					<input name="dni" type="text"  id="dni" placeholder = "dni">
+				</div>
+				<div>
+					<label for="anomatriculacion" class="label">año matriculacion</label>
+					<input name="anomatriculacion" type="text"  id="anomatriculacion" placeholder = "introduce año matriculacion">
+				</div>
+				<div>
+					<label for="precio" class="label">precio</label>
+					<input name="precio" type="text"  id="precio" placeholder = "introduce el departamento">
+				</div>
+				<div>
+					<input type="submit" value="Enviar">
+				</div>
+			</fieldset>
+		</form>
+		</div>
+</div>
+
+
+	</body>
+</html>

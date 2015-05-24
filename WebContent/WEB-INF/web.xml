@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Matriculas3.0</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ADDAL</display-name>
+    <servlet-name>ADDAL</servlet-name>
+    <servlet-class>com.zubiri.servlet.ADDAL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ADDAL</servlet-name>
+    <url-pattern>/ADDAL</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ADDPR</display-name>
+    <servlet-name>ADDPR</servlet-name>
+    <servlet-class>com.zubiri.servlet.ADDPR</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ADDPR</servlet-name>
+    <url-pattern>/ADDPR</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ADDAS</display-name>
+    <servlet-name>ADDAS</servlet-name>
+    <servlet-class>com.zubiri.servlet.ADDAS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ADDAS</servlet-name>
+    <url-pattern>/ADDAS</url-pattern>
+  </servlet-mapping>
+</web-app>

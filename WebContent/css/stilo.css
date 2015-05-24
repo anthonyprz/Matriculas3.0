@@ -1,0 +1,97 @@
+#banner{
+		background-color: black;
+		height: 100px;
+		width: 1324px;
+		margin: auto;
+	}
+	#logo{
+		background-image: url("../imagenes/diente.png");
+		width: 80px;
+		height: 80px;
+		background-size: 80px 80px;
+		float: left;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	#bannerletras{
+		float: left;
+		margin-top: 10px;
+		margin-left: 400px;
+		color: white;
+	}
+	#nav {
+		
+		height: 80px;
+		width: 1324px;
+		margin: auto;
+		position:absolute;
+  		z-index:1;
+  		margin-left: 5px;
+
+	}
+	
+	
+	#contenido{
+		background-color: white;
+		height: 500px;
+		width: 1324px;
+		margin: auto;
+		margin-top: 35px;
+		
+	}
+
+	img {
+		float: left;
+		margin-left: 500px;
+		margin-top: 50px;
+	}
+
+	ol{
+       display:none; 
+       width: 250px;
+       margin-top: 0px;
+       margin-left: 0px;
+        }
+            
+    li{
+      background-color: #9F81F7;
+      list-style: none;
+      width: 441px; 
+      height: 35px;
+      margin-left: -40px; 
+      text-align: center;
+
+     }
+	 ul{
+	 	margin-top: 0px;
+	    width: 441px; 
+	    float:left;
+	    margin-left: -40px;   
+
+	 }
+
+ 		#linea1, #linea2, #linea3 {
+ 			background-color: #6600FF;
+        width: 441px;   	
+        margin-left: 0px;  
+        border: 1px solid black;
+         }
+	
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #330099;
+  color:#330099;
+  font-size:90%;
+  text-align:auto;
+  
+  }
+  fieldset { 
+  	border:3px solid ;
+  	
+   }
+   form{
+	font-size: 18px;
+	color: #330099;
+	line-height: 125%;
+	margin-bottom: 10px;
+}
