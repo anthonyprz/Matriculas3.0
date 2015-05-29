@@ -39,4 +39,34 @@
     <servlet-name>ADDAS</servlet-name>
     <url-pattern>/ADDAS</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VERAL</display-name>
+    <servlet-name>VERAL</servlet-name>
+    <servlet-class>com.zubiri.servlet.VERAL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VERAL</servlet-name>
+    <url-pattern>/VERAL</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VERPR</display-name>
+    <servlet-name>VERPR</servlet-name>
+    <servlet-class>com.zubiri.servlet.VERPR</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VERPR</servlet-name>
+    <url-pattern>/VERPR</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VERAS</display-name>
+    <servlet-name>VERAS</servlet-name>
+    <servlet-class>com.zubiri.servlet.VERAS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VERAS</servlet-name>
+    <url-pattern>/VERAS</url-pattern>
+  </servlet-mapping>
 </web-app>

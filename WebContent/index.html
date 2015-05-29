@@ -25,20 +25,48 @@ $(document).ready(function() {
           $("#sub2").fadeOut('slow/400/fast');
     });
 
+	 //alumnos
+
 	  $("#insertarA").click(function(){
 		  $("#insertarPr").fadeOut(0);
 		  $("#insertarASI").fadeOut(0);
+		  $("#VERAL").fadeOut(0);
 	   $("#insertarAL").fadeIn("linear");
 	    $("#sub1").fadeOut("linear");
 
-    }); 
+	   
+    });
+
+    $("#verA").click(function(){
+    		 $("#insertarAL").fadeOut(0);
+		  $("#insertarPr").fadeOut(0);
+		  $("#insertarASI").fadeOut(0);
+		  $("#VERPR").fadeOut(0);
+		$("#VERASI").fadeOut(0);
+	   $("#VERALU").fadeIn("linear");
+	    $("#sub1").fadeOut("linear");
+ 
+});
+	  //profesores
 	  $("#insertarP").click(function(){
 		  $("#insertarAL").fadeOut(0);
 		  $("#insertarASI").fadeOut(0);
+		  $("#VERPR").fadeOut(0);
 	   $("#insertarPr").fadeIn("linear");
 	    $("#sub2").fadeOut("linear");
 
     });
+
+	  $("#verP").click(function(){
+    		 $("#insertarAL").fadeOut(0);
+		  $("#insertarPr").fadeOut(0);
+		 $("#VERASI").fadeOut(0);
+		    $("#VERALU").fadeOut(0);
+		    $("#insertarASI").fadeOut(0);
+	   $("#VERPRO").fadeIn("linear");
+	    $("#sub1").fadeOut("linear");
+});
+	  //asignatura
 	  $("#insertarAS").click(function(){
 		  $("#insertarAL").fadeOut(0);
 		  $("#insertarPr").fadeOut(0);
@@ -46,203 +74,19 @@ $(document).ready(function() {
 	    $("#sub3").fadeOut("linear");
 
     });
+	  $("#verAS").click(function(){
+    		 $("#insertarAL").fadeOut(0);
+		  $("#insertarPr").fadeOut(0);
+		  $("#insertarASI").fadeOut(0);
+		    $("#VERALU").fadeOut(0);
+		  $("#VERPR").fadeOut(0);
+	   $("#VERASI").fadeIn("linear");
+	    $("#sub1").fadeOut("linear");
+});
    
 
 
 
-/* 
-  	$("#ficha").validate({
-					rules:{
-						dni:{
-							required: true,
-							maxlength: 9
-						},
-						nombre:{
-							required: true,
-							maxlength: 20
-						},
-						apellido:{
-							required: true,
-    						maxlength: 20
-						},
-						telefono:{
-							required: true,
-    						maxlength: 8
-						},
-						direccion:{
-							required: true,
-    						maxlength: 20
-						},
-						nss:{
-							required: true,
-    						maxlength: 10
-						},
-						
-					},
-					 
-					messages:{
-						dni: {
-								required: "Por favor, introduce el dni",
-								maxlength: "Máximo y minimo 9 caracteres"
-						},
-						nombre: {
-								required: "Por favor, introduce el nombre",
-								maxlength: "Máximo 20 caracteres"
-						},
-						apellido: {
-								required: "Por favor, introduce el apellido",
-								maxlength: "Máximo 20 caracteres "
-						},
-						telefono: {
-								required: "introduce el numero de telefono",
-								maxlength: "Máximo y minimo 8 caracteres"
-						},
-						direccion: {
-								required: "introduce tu direccion",
-								maxlength: "Máximo 20 caracteres"
-						},
-						nss: {
-								required: "introduce tu numero de segudirad total",
-								maxlength: "Máximo 10 caracteres"
-						},
-						
-					}
-				})
-
-	$("#dentistas").validate({
-					rules:{
-						codigoD:{
-							required: true,
-							maxlength: 9
-						},
-						nombreDEN:{
-							required: true,
-							maxlength: 20
-						},
-						apellidoDEN:{
-							required: true,
-    						maxlength: 20
-						},
-						sueldo:{
-							required: true,
-    						maxlength: 8
-						},
-						tlf:{
-							required: true,
-    						maxlength: 8
-						},
-						especializacion:{
-							required: true,
-    						maxlength: 20
-						},
-						codigoCLi:{
-							required: true,
-    						maxlength: 10
-						},
-						
-					},
-					 
-					messages:{
-						codigoD: {
-								required: "Por favor, introduce el codigoD",
-								maxlength: "Máximo y minimo 9 caracteres"
-						},
-						nombreDEN: {
-								required: "Por favor, introduce el nombre",
-								maxlength: "Máximo 20 caracteres"
-						},
-						apellidoDEN: {
-								required: "Por favor, introduce el apellido",
-								maxlength: "Máximo 20 caracteres "
-						},
-						sueldo: {
-								required: "introduce el sueldo",
-								maxlength: "Máximo y minimo 8 caracteres"
-						},
-						tlf: {
-								required: "introduce el numero de telefono",
-								maxlength: "Máximo y minimo 8 caracteres"
-						},
-						especializacion: {
-								required: "introduce tu especializacion",
-								maxlength: "Máximo 20 caracteres"
-						},
-						codigoCLi: {
-								required: "introduce el codigo de la clinica donde trabaja",
-								maxlength: "Máximo 10 caracteres"
-						},
-					}
-				})
-
-$("#tratamientoss").validate({
-					rules:{
-						codigoT:{
-							required: true,
-							maxlength: 9
-						},
-						nombre:{
-							required: true,
-							maxlength: 20
-						},
-						precio:{
-							required: true,
-    						maxlength: 20
-						},
-						codigoclinica:{
-							required: true,
-    						maxlength: 8
-						},
-						dnicliente:{
-							required: true,
-    						maxlength: 20
-						},
-						codigoH:{
-							required: true,
-    						maxlength: 10
-						},
-						codigoDe:{
-							required: true,
-    						maxlength: 10
-						},
-						
-					},
-					 
-					messages:{
-						codigoT: {
-								required: "Por favor, introduce el codigoT",
-								maxlength: "Máximo y minimo 9 caracteres"
-						},
-						nombre: {
-								required: "Por favor, introduce el nombre",
-								maxlength: "Máximo 20 caracteres"
-						},
-						precio: {
-								required: "Por favor, introduce el precio",
-								maxlength: "Máximo 20 caracteres "
-						},
-						
-						codigoclinica: {
-								required: "introduce el numero de codigoclinica",
-								maxlength: "Máximo y minimo 8 caracteres"
-						},
-						dnicliente: {
-								required: "introduce el dni del cleinte",
-								maxlength: "Máximo 20 caracteres"
-						},
-						codigoH: {
-								required: "introduce el codigo del Higienista",
-								maxlength: "Máximo 10 caracteres"
-						},
-						
-						codigoDe: {
-								required: "introduce el codigo del dentista ",
-								maxlength: "Máximo 10 caracteres"
-						},
-					
-					}
-				})
-*/
-	
 
 });
 		</script>
@@ -271,7 +115,7 @@ $("#tratamientoss").validate({
 		<li id="linea2">profesores</li>
 						<ol hidden id="sub2">
 			                <li id="insertarP">insertar profesor</li>
-			                <li id="higienista">higienista</li>
+			                <li id="verP">ver profesores</li>
 			                <li id="auxiliar">auxiliar</li>
 			            </ol>
 	</ul>
@@ -280,7 +124,7 @@ $("#tratamientoss").validate({
 		
 						<ol hidden id="sub3">
 			                <li id="insertarAS">insertar asignatura</li>
-			                <li id="producto">producto</li>
+			                <li id="verAS">ver asignaturas</li>
 			                <li id="producto">auxiliar</li>
 			            </ol>
 		</ul>
@@ -318,6 +162,17 @@ $("#tratamientoss").validate({
 			</fieldset>
 		</form>
 		</div>
+
+
+		<div hidden id="VERALU">
+			<form action="VERAL" method="POST">
+				<input type="submit" value="Listar alumnos">
+		</form>
+		</div>
+
+
+
+		
 		
 		
 		<!--         profesor       -->
@@ -348,6 +203,13 @@ $("#tratamientoss").validate({
 				<div>
 					<input type="submit" value="Enviar">
 				</div>
+			</fieldset>
+		</form>
+		</div>
+
+		<div hidden id="VERPRO">
+			<form action="VERPR" method="POST">
+				<input type="submit" value="Listar profesores">
 			</fieldset>
 		</form>
 		</div>
@@ -384,6 +246,15 @@ $("#tratamientoss").validate({
 			</fieldset>
 		</form>
 		</div>
+
+		<div hidden id="VERASI">
+			<form action="VERAS" method="POST">
+				<input type="submit" value="Listar asignatura">
+			</fieldset>
+		</form>
+		</div>
+
+
 </div>
 
 

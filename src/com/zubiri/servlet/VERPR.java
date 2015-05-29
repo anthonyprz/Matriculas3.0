@@ -1,34 +1,33 @@
 package com.zubiri.servlet;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.zubiri.matriculas.*;
-
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 /**
- * Servlet implementation class ADDAS
+ * Servlet implementation class VERPR
  */
-public class ADDAS extends HttpServlet {
+public class VERPR extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ADDAS() {
+    public VERPR() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,12 +43,6 @@ public class ADDAS extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nombre = request.getParameter("nombre");
-		int creditos = Integer.parseInt(request.getParameter("creditos"));
-		String dnipr = request.getParameter("dni");
-		int anomatriculacion = Integer.parseInt(request.getParameter("anomatriculacion"));
-		double precio = Double.parseDouble(request.getParameter("precio"));
-	
 		try{
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
@@ -61,19 +54,21 @@ public class ADDAS extends HttpServlet {
 			System.out.println("sentencia creada");
 			
 			
-			sentencia.executeUpdate("INSERT INTO asignatura (nombre, creditos, dniP, aÑoMatriculacion, precio)"
-						+ "VALUES ('"+nombre+"','"+creditos+"','"+dnipr+"','"+anomatriculacion+"','"+precio+"')");
-					
+			ResultSet profesor = sentencia.executeQuery("SELECT * FROM profesor;"); 
 			
-			ResultSet asignatura = sentencia.executeQuery("SELECT * FROM asignatura WHERE nombre = '"+request.getParameter("nombre")+"';"); 
-			//asignatura.next();
 			out.println("<html>");
 			out.println("<head><title>Respuesta</title>");
 			out.println("<body>");
-			out.println("<h1>alumnos</h1>");
-			//out.println("<p>el alumno con el dni : " + alumno.getString("dni")  + " ha sido añadido a la base de datos</p>");
-			out.println("<p>la asignatura con el nombre : " + asignatura.getString("nombre")
-					+ " ha sido añadido a la base de datos</p>");
+			out.println("<h1>pfrofesores</h1>");
+			while (profesor.next()){
+				out.println("<p>--------------profesores---------------</p>");
+				out.println("<p>DNI: "+profesor.getString("dni")+ "</p>");
+				out.println("<p>nombre: "+profesor.getString("nombre")+ "</p>");
+				out.println("<p>apellido: "+profesor.getString("apellido")+ "</p>");
+				out.println("<p>año de inscripcion: "+profesor.getInt("titulacion")+ "</p>");
+				out.println("<p>ciclo: "+profesor.getString("departamento")+ "</p>");
+				
+			}
 			out.println("</body></html>");
 
 				conexion.close();		
@@ -81,7 +76,6 @@ public class ADDAS extends HttpServlet {
 		catch(Exception e){
 			System.out.println("aqui hay un problema " + e);
 		}
-	
 	}
 
 }
