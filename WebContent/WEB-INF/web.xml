@@ -149,4 +149,14 @@
     <servlet-name>BuscarASI</servlet-name>
     <url-pattern>/BuscarASI</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModificarASI</display-name>
+    <servlet-name>ModificarASI</servlet-name>
+    <servlet-class>com.zubiri.servlet.ModificarASI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificarASI</servlet-name>
+    <url-pattern>/ModificarASI</url-pattern>
+  </servlet-mapping>
 </web-app>
