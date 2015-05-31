@@ -332,6 +332,36 @@ $(document).ready(function() {
 		<input type="submit" value="borrar asignatura">
 		</form>
 		</div>
+		
+		
+		
+		 <div id="buscarAS">
+        <form action="BuscarASI" method="POST">
+            <h3>Introduze el nombre de la asignaura para buscarla</h3>
+            <input type="text" name="nombreASIG">
+            <input type="submit" value="Buscar asignatura" >
+            <br>
+            <br>
+        </form>
+
+
+		<div id="modificarAS">
+             
+            <h3>modificar profesores</h3>
+          
+        
+        	<form  action="ModificarASI" method="POST">
+        	<table>
+                <tr><td>nombre de la asignatura a modificar:</td><td><input type="text" name="nombreAS"></td></tr>
+                <tr><td>creditos:</td><td><input type="text" name="creditos"></td></tr>
+                <tr><td>dni profesor (debe existir):</td><td><input type="text" name="dniP"></td></tr>
+                <tr><td>año Matriculacion:</td><td><input type="text" name="añoMA"></td></tr>
+                <tr><td>precio:</td><td><input type="text" name="precio"></td></tr>
+                <tr><td><input type="submit" value="Submit"></td></tr>
+            </table>
+        	
+        	</form>
+        </div>
 
 
 </div>

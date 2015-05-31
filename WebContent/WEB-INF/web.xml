@@ -139,4 +139,14 @@
     <servlet-name>ModificarP</servlet-name>
     <url-pattern>/ModificarP</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarASI</display-name>
+    <servlet-name>BuscarASI</servlet-name>
+    <servlet-class>com.zubiri.servlet.BuscarASI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarASI</servlet-name>
+    <url-pattern>/BuscarASI</url-pattern>
+  </servlet-mapping>
 </web-app>
