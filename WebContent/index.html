@@ -257,6 +257,35 @@ $(document).ready(function() {
 		</div>
 		
 		
+		 <div id="buscarP">
+        <form action="BuscarP" method="POST">
+            <h3>Introduze el DNI del profesor para buscarlo</h3>
+            <input type="text" name="buscarDNIP">
+            <input type="submit" value="Buscar Profesores" >
+            <br>
+            <br>
+        </form>
+
+
+		<div id="modificarP">
+             
+            <h3>modificar profesores</h3>
+          
+        
+        	<form  action="ModificarP" method="POST" id="fModificarP">
+        	<table>
+                <tr><td>DNI del profesor a modificar:</td><td><input type="text" name="mdniP"></td></tr>
+                <tr><td>Nombre:</td><td><input type="text" name="mnombreP"></td></tr>
+                <tr><td>Apellido:</td><td><input type="text" name="mapellidoP"></td></tr>
+                <tr><td>Titulacion:</td><td><input type="text" name="mtitulacionP"></td></tr>
+                <tr><td>Departamentp:</td><td><input type="text" name="mdepartamentoP"></td></tr>
+                <tr><td><input type="submit" value="Submit"></td></tr>
+            </table>
+        	
+        	</form>
+        </div>
+		
+		
 		<!--         matricula o asignatura       -->
 		<div hidden id="insertarASI">
 			<form action="ADDAS" method="POST">

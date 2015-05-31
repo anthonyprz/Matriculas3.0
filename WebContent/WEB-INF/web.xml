@@ -119,4 +119,24 @@
     <servlet-name>BuscarA</servlet-name>
     <url-pattern>/BuscarA</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarP</display-name>
+    <servlet-name>BuscarP</servlet-name>
+    <servlet-class>com.zubiri.servlet.BuscarP</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarP</servlet-name>
+    <url-pattern>/BuscarP</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModificarP</display-name>
+    <servlet-name>ModificarP</servlet-name>
+    <servlet-class>com.zubiri.servlet.ModificarP</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificarP</servlet-name>
+    <url-pattern>/ModificarP</url-pattern>
+  </servlet-mapping>
 </web-app>
