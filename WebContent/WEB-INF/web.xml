@@ -159,4 +159,14 @@
     <servlet-name>ModificarASI</servlet-name>
     <url-pattern>/ModificarASI</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ADDALDATABASE</display-name>
+    <servlet-name>ADDALDATABASE</servlet-name>
+    <servlet-class>com.zubiri.servlet.ADDALDATABASE</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ADDALDATABASE</servlet-name>
+    <url-pattern>/ADDALDATABASE</url-pattern>
+  </servlet-mapping>
 </web-app>
