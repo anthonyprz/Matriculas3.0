@@ -69,4 +69,54 @@
     <servlet-name>VERAS</servlet-name>
     <url-pattern>/VERAS</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BorrarAL</display-name>
+    <servlet-name>BorrarAL</servlet-name>
+    <servlet-class>com.zubiri.servlet.BorrarAL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BorrarAL</servlet-name>
+    <url-pattern>/BorrarAL</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BorrarPR</display-name>
+    <servlet-name>BorrarPR</servlet-name>
+    <servlet-class>com.zubiri.servlet.BorrarPR</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BorrarPR</servlet-name>
+    <url-pattern>/BorrarPR</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BorrarASI</display-name>
+    <servlet-name>BorrarASI</servlet-name>
+    <servlet-class>com.zubiri.servlet.BorrarASI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BorrarASI</servlet-name>
+    <url-pattern>/BorrarASI</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModificarA</display-name>
+    <servlet-name>ModificarA</servlet-name>
+    <servlet-class>com.zubiri.servlet.ModificarA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificarA</servlet-name>
+    <url-pattern>/ModificarA</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarA</display-name>
+    <servlet-name>BuscarA</servlet-name>
+    <servlet-class>com.zubiri.servlet.BuscarA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarA</servlet-name>
+    <url-pattern>/BuscarA</url-pattern>
+  </servlet-mapping>
 </web-app>

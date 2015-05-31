@@ -169,7 +169,41 @@ $(document).ready(function() {
 				<input type="submit" value="Listar alumnos">
 		</form>
 		</div>
+		
+		<div id="borrarA">
+		<form action="BorrarAL" method="POST">
+		<label for="dniALUM" class="label">alumno</label>
+		<input name="dniALUM" type="text"  id="dniALUM" placeholder = "introduce el dni para eliminarlo">
+		<input type="submit" value="borrar alumno">
+		</form>
+		</div>
 
+
+		<div id="modificarA">
+			
+        	<form action="ModificarA" method="POST" id="fModificar">
+        	<table>
+                <tr><td>DNI del alumno a modificar:</td><td><input type="text" name="mdniA"></td></tr>
+                <tr><td>Nombre:</td><td><input type="text" name="mnombreA"></td></tr>
+                <tr><td>Apellido:</td><td><input type="text" name="mapellidoA"></td></tr>
+                <tr><td>Año de Inscripcion:</td><td><input type="text" name="manoA"></td></tr>
+                <tr><td>Ciclo:</td><td><input type="text" name="mcicloA"></td></tr>
+                <tr><td><input type="submit" value="Submit"></td></tr>
+            </table>
+             </form>
+
+		</div>
+		
+		
+		<div id="buscarA">
+        <form action="BuscarA" method="POST">
+            <h3>Introduze el DNI del alumno para buscarlo</h3>
+            <input type="text" name="buscarDNIA">
+            <input type="submit" value="Buscar alumnos">
+            <br>
+            <br>
+        </form>
+        </div>
 
 
 		
@@ -214,6 +248,14 @@ $(document).ready(function() {
 		</form>
 		</div>
 		
+		<div id="borrarP">
+		<form action="BorrarPR" method="POST">
+		<label for="dniPRO" class="label">profesor</label>
+		<input name="dniPRO" type="text"  id="dniPRO" placeholder = "introduce el dni para eliminarlo">
+		<input type="submit" value="borrar profesor">
+		</form>
+		</div>
+		
 		
 		<!--         matricula o asignatura       -->
 		<div hidden id="insertarASI">
@@ -251,6 +293,14 @@ $(document).ready(function() {
 			<form action="VERAS" method="POST">
 				<input type="submit" value="Listar asignatura">
 			</fieldset>
+		</form>
+		</div>
+
+		<div id="borrarAS">
+		<form action="BorrarASI" method="POST">
+		<label for="nombreASI" class="label">asignatura</label>
+		<input name="nombreASI" type="text"  id="nombreASI" placeholder = "introduce el nombre  para eliminarlo">
+		<input type="submit" value="borrar asignatura">
 		</form>
 		</div>
 
